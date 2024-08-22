@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Send SMS</title>
+    <title>OTP Verification</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Send SMS Request</h1>
-    <form action="sms.php" method="POST">
-        <label for="phoneNumber">Phone Number:</label>
-        <input type="text" id="phoneNumber" name="phoneNumber" required>
-        <button type="submit">Send Request</button>
-    </form>
-
-    <?php if (isset($_GET['response'])): ?>
-        <h2>Response</h2>
-        <pre><?php echo htmlspecialchars($_GET['response']); ?></pre>
-    <?php endif; ?>
+    <div class="otp-container">
+        <form action="sms.php" method="POST">
+            <h2>OTP Verification</h2>
+            <label for="phone">Enter your phone number:</label>
+            <input type="text" id="phone" name="phone" placeholder="+1234567890" required>
+            <button type="submit">Send OTP</button>
+        </form>
+    </div>
 </body>
 </html>
